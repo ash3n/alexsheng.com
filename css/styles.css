@@ -13,6 +13,7 @@ html {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    background-position: top;
 }
 .bulma-image {
     width: 200px;
