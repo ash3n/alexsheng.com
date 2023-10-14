@@ -9,7 +9,7 @@ html {
     margin: 30px 0 0 0;
 }
 .has-bg-image {
-    background-image: url('../images/BrooklynVillain.jpg'), url('../images/BrooklynVillain.jpg');
+    background-image: url('../images/AlexHero.jpg'), url('../images/AlexHero.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
