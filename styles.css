@@ -18,8 +18,8 @@
 
 .hero-image-container {
     position: relative;
-    width: 60vw; /* Adjust as needed */
-    height: 55vh;
+    width: 75vw; /* Adjust as needed */
+    height: 65vh;
     overflow: hidden;
     margin: auto;
 }
