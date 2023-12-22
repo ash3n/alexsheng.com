@@ -1,5 +1,3 @@
-/* CORE STYLES */
-
 /*
 * {
     margin: 0;
@@ -8,9 +6,74 @@
 }
 */
 
+/* CORE STYLES */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff; /* Changed to white */
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+/* SHOWCASE STYLES */
+
+.content-flex-container {
+    background: rgba(244, 244, 244, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.image-container {
+    margin: 20px;
+    flex: 1;
+    text-align: center;
+}
+
+.image-container .headshot {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.text-container {
+    flex: 2;
+    margin: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .content-flex-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-container {
+        margin-left: 0;
+        margin-top: 0px;
+    }
+}
+
+.grey-box {
+    background: #f4f4f4;
+    margin-bottom: 8px;
+    padding: 6px; /* Further reduced padding */
+    border-radius: 4px; /* Slightly reduced radius for a sharper look */
+    font-size: 0.9em; /* Adjusted for overall font size */
+}
+
 .hero-image {
-    width: 87.5vw; /* 70% of the viewport width */
-    height: 65vh;
+    width: 100vw; /* 70% of the viewport width */
+    height: 100vh;
     display: block; /* Remove any default inline spacing */
     margin: auto; /* Center the image if smaller than the viewport */
     object-fit: cover;
@@ -41,50 +104,6 @@
     bottom: 0;
     background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 1%, rgba(255, 255, 255, 0) 99%, rgba(255, 255, 255, 1) 100%);
     z-index: 1;
-}
-
-.banner-image-container {
-    position: relative;
-    width: 90vw; /* Adjust as needed */
-    height: 250px;
-    display:block;
-    overflow: hidden;
-    margin: auto;
-}
-
-.banner-image-container img {
-    width: 100%; /* Ensure image covers the container */
-    height: 100%; /* Maintain aspect ratio */
-    display: block;
-    margin: auto;
-    object-fit: cover;
-}
-
-.banner-image-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 1%, rgba(255, 255, 255, 0) 99%, rgba(255, 255, 255, 1) 100%);
-    z-index: 1;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #fff; /* Changed to white */
-    color: #333;
-    line-height: 1.6;
-}
-
-.container {
-    max-width: 1100px;
-    margin: auto;
-    overflow: hidden;
-    padding: 0 20px;
 }
 
 /* HEADER STYLES */
