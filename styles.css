@@ -27,17 +27,17 @@ body {
 /* SHOWCASE STYLES */
 
 .content-flex-container {
-    background: rgba(244, 244, 244, 1);
+    /* background: rgba(244, 244, 244, 1); */
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    /* padding: 10px; */
 }
 
 .image-container {
-    margin: 20px;
     flex: 1;
     text-align: center;
+    margin: 20px;
 }
 
 .image-container .headshot {
@@ -54,7 +54,7 @@ body {
 @media screen and (max-width: 768px) {
     .content-flex-container {
         flex-direction: column;
-        text-align: center;
+        text-align: left;
     }
 
     .text-container {
