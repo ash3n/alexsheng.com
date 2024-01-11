@@ -30,7 +30,7 @@ body {
 
 /* SHOWCASE STYLES */
 
-.content-flex-container {
+.content-flex {
     /* background: rgba(244, 244, 244, 1); */
     display: flex;
     align-items: center;
