@@ -30,7 +30,7 @@ body {
 
 /* SHOWCASE STYLES */
 
-.content-flex {
+.flex {
     /* background: rgba(244, 244, 244, 1); */
     display: flex;
     align-items: center;
@@ -57,9 +57,9 @@ body {
 }
 
 @media screen and (max-width: 768px) and (orientation: portrait) {
-    .content-flex-container {
+    .flex {
         flex-direction: column-reverse;
-        text-align: left;
+        gap: 0;
     }
 
     .text-container {
