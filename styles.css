@@ -56,18 +56,6 @@ body {
     margin: 20px;
 }
 
-@media screen and (max-width: 768px) and (orientation: portrait) {
-    .flex {
-        flex-direction: column-reverse;
-        gap: 0;
-    }
-
-    .text-container {
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-}
-
 .grey-box {
     background: #f4f4f4;
     margin-bottom: 8px;
@@ -286,4 +274,20 @@ footer {
 
 #publications .publication .link:hover {
     text-decoration: underline;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 768px) and (orientation: portrait) {
+    .flex {
+        flex-direction: column-reverse;
+        gap: 0;
+    }
+    .text-container {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    header a {
+        font-size: 90%;
+    }
 }
