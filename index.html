@@ -19,8 +19,8 @@
             <nav>
                 <ul>
                     <li class="current"><a href="index.html">Home</a></li>
-                    <li><a href="#journey">Experience</a></li>
-                    <li><a href="#publications">Research</a></li>
+                    <li><a href="experience.html">Experience</a></li>
+                    <li><a href="research.html">Research</a></li>
                 </ul>
             </nav>
         </div>
@@ -42,72 +42,6 @@
             </div>
             <div class="image-container">
                 <img src="images/headshot_business.jpg" alt="Alex Sheng" class="headshot">
-            </div>
-        </div>
-    </section>
-
-
-    <section id="journey">
-        <div class="container">
-            <h2>Experience</h2>
-            <div class="experience">
-                <span class="date">2024</span>
-                <span class="company">(Hedge Fund)</span>
-                <span class="description">Quantitative Research</span>
-            </div>
-            <div class="experience">
-                <span class="date">2023</span>
-                <span class="company">Trillium Trading</span>
-                <span class="description">Proprietary Equity Trading</span>
-            </div>
-            <div class="experience">
-                <span class="date">2022</span>
-                <span class="company">Google DeepMind</span>
-                <span class="description">Language Models</span>
-            </div>
-            <div class="experience">
-                <span class="date">2021</span>
-                <span class="company">IBM Research</span>
-                <span class="description">Language Models</span>
-            </div>
-            <div class="experience">
-                <span class="date">2019</span>
-                <span class="company">Google Brain</span>
-                <span class="description">AI Supercomputing</span>
-            </div>
-            <div class="experience">
-                <span class="date">2019</span>
-                <span class="company">Epoch Zero AI</span>
-                <span class="description">Applied Machine Learning</span>
-            </div>
-            <!-- <p class="fine-print">Some information is intentionally omitted due to non-disclosure agreements.</p> -->
-        </div>
-    </section>
-
-
-    <section id="publications">
-        <div class="container">
-            <h2>Research</h2>
-            <div class="publication">
-                <span class="date">2023</span>
-                <span class="title">Self-Programming Artificial Intelligence Using Code-Generating Language Models</span>
-                <span class="venue">Preprint</span>
-                <span class="abstract">Recent progress in large-scale language models has enabled breakthroughs in previously intractable computer programming tasks. Prior work in meta-learning and neural architecture search has led to substantial successes across various task domains, spawning myriad approaches for algorithmically optimizing the design and learning dynamics of deep learning models. At the intersection of these research areas, we implement a code-generating language model with the ability to modify its own source code. Self-programming AI algorithms have been of interest since the dawn of AI itself. Although various theoretical formulations of generalized self-programming AI have been posed, no such system has been successfully implemented to date under real-world computational constraints. Applying AI-based code generation to AI itself, we develop and experimentally validate the first practical implementation of a self-programming AI system. We empirically show that a self-programming AI implemented using a code generation model can successfully modify its own source code to improve performance and program sub-models to perform auxiliary tasks. Our model can self-modify various properties including model architecture, computational capacity, and learning dynamics.</span>
-                <a href="https://arxiv.org/abs/2205.00167" class="link">[Link]</a>
-            </div>
-            <div class="publication">
-                <span class="date">2022</span>
-                <span class="title">Task Transfer and Domain Adaptation for Zero-Shot Question Answering</span>
-                <span class="venue">NAACL</span>
-                <span class="abstract">Pretrained language models have shown success in various areas of natural language processing, including reading comprehension tasks. However, when applying machine learning methods to new domains, labeled data may not always be available. To address this, we use supervised pretraining on source-domain data to reduce sample complexity on domain-specific downstream tasks. We evaluate zero-shot performance on domain-specific reading comprehension tasks by combining task transfer with domain adaptation to fine-tune a pretrained model with no labelled data from the target task. Our approach outperforms Domain Adaptive Pretraining on downstream domain-specific reading comprehension tasks in 3 out of 4 domains.</span>
-                <a href="https://aclanthology.org/2022.deeplo-1.12/" class="link">[Link]</a>
-            </div>
-            <div class="publication">
-                <span class="date">2020</span>
-                <span class="title">Distributed Evolution Strategies Using TPUs for Meta-Learning</span>
-                <span class="venue">IEEE</span>
-                <span class="abstract">Meta-learning traditionally relies on backpropagation through entire tasks to iteratively improve a model's learning dynamics. However, this approach is computationally intractable when scaled to complex tasks. We propose a distributed evolutionary meta-learning strategy using Tensor Processing Units (TPUs) that is highly parallel and scalable to arbitrarily long tasks with no increase in memory cost. Using a Prototypical Network trained with evolution strategies on the Omniglot dataset, we achieved an accuracy of 98.4% on a 5-shot classification problem. Our algorithm used as much as 40 times less memory than automatic differentiation to compute the gradient, with the resulting model achieving accuracy within 1.3% of a backpropagation-trained equivalent (99.6%). We observed better classification accuracy as high as 99.1% with larger population configurations. We further experimentally validate the stability and performance of ES-ProtoNet across a variety of training conditions (varying population size, model size, number of workers, shot, way, ES hyperparameters, etc.). Our contributions are twofold: we provide the first assessment of evolutionary meta-learning in a supervised setting, and create a general framework for distributed evolution strategies on TPUs.</span>
-                <a href="https://ieeexplore.ieee.org/document/9308334" class="link">[Link]</a>
             </div>
         </div>
     </section>
