@@ -37,6 +37,7 @@ body {
 #typewriter {
     font-family: "Consolas", "Courier New", monospace;
     font-size: 1.1em;
+    white-space: pre-line;
 }
 
 .typewriter-span1{
@@ -44,7 +45,8 @@ body {
 }
 
 .typewriter-span2{
-    color: rgb(40, 140, 200); /* Change this to your desired color */
+    color: rgb(40, 160, 240);
+    /* color: rgb(40, 140, 200); Change this to your desired color */
 }
 
 .flex {
@@ -305,6 +307,6 @@ footer {
         margin-bottom: 0;
     }
     header a {
-        font-size: 90%;
+        font-size: 0.9em;
     }
 }

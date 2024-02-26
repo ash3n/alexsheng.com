@@ -30,16 +30,16 @@
         <div class="container flex">
             <div class="text-container">
                 <h2>Hi, I'm Alex :)</h2>
-                <p id="typewriter">I'm an AI scientist based in the US currently working in the quantitative trading space.</p>
-                <hr></hr>
-                <p>My research interests lie in deep learning, particularly meta-learning and self-improving AI. My work includes:</p>
+                <p id="typewriter"><span class="typewriter-span1">Machine Learning Researcher</span><br>New York, United States</p>
+                <hr style="margin-top: 30px; margin-bottom: 30px;"></hr>
+                <p>I'm an AI scientist currently working in the algorithmic trading space. I am regularly involved in diverse research topics like code generation, learning algorithms, and self-improving AI. My work includes:</p>
                 <ul>
                     <li>recursive self-programming AI systems</li>
-                    <li>memory retrieval for large language models</li>
+                    <li>memory retrieval for language models</li>
                     <li>parallelized AI supercomputing algorithms</li>
                     <li>various meta-learning and few-shot learning algorithms</li>
                 </ul>
-                <p>My other interests include financial markets, weightlifting, video games, and anime.</p></p>
+                <p>My other interests include weightlifting, video games, anime, and financial markets.</p></p>
             </div>
             <div class="image-container">
                 <img src="images/portrait_reeds.jpg" alt="Alex Sheng" class="headshot">
@@ -64,21 +64,28 @@
             typeWriter();
         };
 
-        var i = 0;
+        var timeout = 25;
+        var pauseAfterTyping = 1500; // 1.5 second pause after typing
+
+        var prefix = "";
+        var suffix = "<br>New York, United States";
         var entries = [
-            ["a ", "Machine Learning Researcher"],
-            ["a ", "High-Frequency Trader"],
+            ["", "Machine Learning Researcher"],
+            ["", "High-Frequency Trader"],
+            ["", "Tech Visionary"],
         ];
+
         var currentEntryIndex = 0;
-        var prefix = "I am ";
-        var suffix = " based in the US.";
         var txtArticle = entries[currentEntryIndex][0];
         var txt = entries[currentEntryIndex][1];
-        var timeout = 25;
+
+        var i = 0;
         var typeState = 0;
-        var pauseAfterTyping = 1500; // 1 second pause after typing
-        var stringParts = [];
         var articleChanged = false;
+        var stringParts = [];
+
+        var responsiveString = "";
+        if (window.matchMedia("(max-width: 768px) and (orientation: portrait)").matches) {}
     
         function typeWriter() {
             if (typeState == 0) {
@@ -88,12 +95,14 @@
                     stringParts = [
                         prefix,
                         txtArticle,
+                        responsiveString,
                         "<span class='typewriter-span1'>",
                         txt.substring(0, i + 1),
                         "</span>",
                         "<span class='typewriter-span2'>",
                         generateRandomString(txt.length - (i + 1)),
                         '</span>',
+                        responsiveString,
                         suffix
                     ];
                     document.getElementById("typewriter").innerHTML = stringParts.join("");
@@ -112,12 +121,14 @@
                     stringParts = [
                         prefix,
                         txtArticle,
+                        responsiveString,
                         "<span class='typewriter-span2'>",
                         generateRandomString(i),
                         "</span>",
                         "<span class='typewriter-span1'>",
                         txt.substring(i, txt.length),
                         "</span>",
+                        responsiveString,
                         suffix
                     ];
                     document.getElementById("typewriter").innerHTML = stringParts.join("");
@@ -143,9 +154,11 @@
                     stringParts = [
                         prefix,
                         txtArticle,
+                        responsiveString,
                         "<span class='typewriter-span2'>",
                         generateRandomString(i),
                         "</span>",
+                        responsiveString,
                         suffix
                     ];
                     document.getElementById("typewriter").innerHTML = stringParts.join("");
