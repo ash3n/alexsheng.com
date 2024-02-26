@@ -30,6 +30,23 @@ body {
 
 /* SHOWCASE STYLES */
 
+#showcase h2 {
+    font-family: "Consolas", "Courier New", monospace;
+}
+
+#typewriter {
+    font-family: "Consolas", "Courier New", monospace;
+    font-size: 1.1em;
+}
+
+.typewriter-span1{
+    color: rgb(40, 160, 240); /* Change this to your desired color */
+}
+
+.typewriter-span2{
+    color: rgb(40, 140, 200); /* Change this to your desired color */
+}
+
 .flex {
     /* background: rgba(244, 244, 244, 1); */
     display: flex;
