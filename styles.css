@@ -120,6 +120,11 @@ body {
 
 /* HEADER STYLES */
 
+header h1 {
+    font-family: "Consolas", "Courier New", monospace;
+    font-weight: normal;
+}
+
 header {
     background: #fff;
     color: #333;
