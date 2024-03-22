@@ -236,6 +236,8 @@ footer {
 
 .experience .date,
 .experience .company,
+.experience .title,
+.experience .special-title,
 .experience .description {
     display: block;
     margin: 1px 0; /* Reduced margin */
@@ -249,6 +251,15 @@ footer {
 .experience .company {
     color: #333;
     font-weight: bold;
+}
+
+.experience .title {
+    
+}
+
+.experience .special-title {
+    color: #2a8bcd;
+    font-size: 0.7em;
 }
 
 .experience .description {
