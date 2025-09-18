@@ -23,12 +23,12 @@
         <div class="container flex">
             <div class="text-container">
                 <h2>Hi, I'm Alex :)</h2>
-                <p id="typewriter"><span class="typewriter-span1">Machine Learning Researcher</span><br>New York, United States</p>
+                <p id="typewriter"><span class="typewriter-span1">Machine Learning Researcher</span><br>United States</p>
                 <hr style="margin-top: 30px; margin-bottom: 30px;"></hr>
-                <p>I have been working on various AI open-source and research pursuits for ~8 years, primarily focused on developing novel algorithms for learning dynamics, knowledge integration, code generation, and recursive self-improvement.</p>
+                <p>I have been in the AI space for ~8 years, working on new algorithms for learning dynamics, vector space representation, and recursive self-improvement. Some of the technology I helped develop is now used in mainstream LLM products.</p>
                 <!-- You found my secret message! Read below if interested.
                 <p>I helped develop early versions of what is now known as Naive RAG (the most common RAG* algorithm in modern LLM products) in 2019, under the guidance of one of the authors of Attention is All You Need.</p> 
-                <p class="fine-print">* Footnote: Our work in 2019 was part of the precursor academic lineage to later work at Facebook, which first coined the name "RAG" in 2020.</p> -->
+                <p class="fine-print">* Footnote: Our work in 2019 was an ancestor in the citation lineage to later work at Facebook, which first coined the name "RAG" in 2020.</p> -->
             </div>
             <div class="image-container">
                 <img src="images/portrait_reeds.jpg" alt="Alex Sheng" class="headshot">
@@ -36,7 +36,7 @@
         </div>
     </section>
 
-    <div class="container">
+    <!-- <div class="container">
          <section id="experience">
             <h2>Experience</h2>
             <div class="experience">
@@ -44,26 +44,20 @@
                 <span class="company">Squarepoint Capital</span>
                 <span class="description">Quantitative Researcher</span>
             </div>
-            <div class="experience">
-                <span class="date">2021</span>
-                <span class="company">IBM AI Research</span>
-                <span class="special-title">Research Collaboration</span>
-                <span class="description">Language Model Fine-tuning</span>
-            </div>
         </section>
-    </div>
+    </div> -->
 
     <div style="margin-top: 40px;"></div>
 
     <footer>
         <div class="container footer-content">
             <p>Alex Sheng</p>
-            <p class="fine-print">New York, United States</p>
+            <p class="fine-print">United States</p>
             <ul>
                 <li><a href="https://www.linkedin.com/in/alexsheng/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
                 <li><a href="https://github.com/ash3n" target="_blank"><i class="fa fa-github"></i></a></li>
             </ul>
-            <p class="fine-print">- opinions are my own -</p>
+            <!-- <p class="fine-print">- opinions are my own -</p> -->
         </div>
     </footer>
 
@@ -72,14 +66,14 @@
             typeWriter();
         };
 
-        var timeout = 40;
-        var pauseAfterTyping = 1500; // 1.5 second pause after typing
+        var timeout = 30;
+        var pauseAfterTyping = 3000; // 1.5 second pause after typing
 
         var prefix = "";
-        var suffix = "<span class='typewriter-span2'> Researcher</span><br>New York, United States";
+        var suffix = "<span class='typewriter-span2'></span><br>United States";
         var entries = [
-            ["", "Machine Learning"],
-            ["", "Quantitative"],
+            ["", "Machine Learning Researcher"],
+            ["", "Quantitative Trader"],
         ];
 
         var currentEntryIndex = 0;
