@@ -1,11 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="refresh" content="0; url=business-card.html">
-<title>alexsheng</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Sheng</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            font-family: monospace;
+        }
+    </style>
 </head>
 <body>
-<p>If you are not redirected automatically, please click <a href="business-card.html">here</a>.</p>
+    <h1>Alex Sheng</h1>
+
+    <p><br></p>
+
+    <img src="images/landing_picture.jpeg" alt="Landing Picture" style="width: 100%; height: auto; object-fit: cover; display: block;">
+
+    <p><br></p>
+
+    <p>Hi.</p>
+    <p id="typewriter">I am a <span style="color: rgb(40, 160, 240);">Machine Learning Researcher</span> in the United States.</p>
+
+    <p>I have been in the AI space for ~8 years, working on new algorithms for learning dynamics, vector space representations, and code generation. I helped develop some of the technology that is now used in popular LLM products, supporting how consumer/enterprise chatbots answer questions and integrate domain knowledge.</p>
+
+    <p>I have also spent time as a quant trader in the hedge fund space, applying data science expertise in the financial markets. The areas I have worked on include mortgage-backed securities and event-driven equity.</p>
+
+    <p><br></p>
+
+    <p><i class="fa fa-linkedin"></i> &nbsp; <a href="https://www.linkedin.com/in/alexsheng/">alexsheng</a></p>
+    <p><i class="fa fa-github"></i> &nbsp; <a href="https://github.com/ash3n">ash3n</a></p>
+
+    <!-- Typewriter JavaScript -->
+    <script>
+        window.onload = function() {
+            typeWriter();
+        };
+
+        var timeout = 30;
+        var pauseAfterTyping = 2500;
+
+        var placeholder = "Machine Learning Researcher";
+        var entries = [
+            "Machine Learning Researcher",
+            "Quantitative Trader",
+        ];
+
+        // Extract prefix and suffix from HTML
+        var originalHTML = document.getElementById("typewriter").innerHTML;
+        var placeholderIndex = originalHTML.indexOf(placeholder);
+        var prefix = originalHTML.substring(0, placeholderIndex);
+        var suffix = originalHTML.substring(placeholderIndex + placeholder.length);
+
+        // Minimal global state
+        var maxLength = Math.max(...entries.map(e => e.length));
+        var states = new Array(maxLength).fill(0);
+        var currentEntryIndex = 0;
+        var currentPhaseIndex = 0;
+        var currentStep = 0;
+
+        function typeWriter() {
+            var phases = [typingPhase, corruptingPhase, adjustingPhase];
+            var phaseComplete = phases[currentPhaseIndex](currentStep);
+
+            if (phaseComplete) {
+                currentStep = 0;
+                var wasTyping = (currentPhaseIndex === 0);
+                currentPhaseIndex = (currentPhaseIndex + 1) % phases.length;
+                var delay = wasTyping ? pauseAfterTyping : timeout;
+                setTimeout(typeWriter, delay);
+            } else {
+                currentStep++;
+                setTimeout(typeWriter, timeout);
+            }
+        }
+
+        function typingPhase(step) {
+            var currentEntry = entries[currentEntryIndex];
+
+            if (step === 0) {
+                // Initialize: set all positions to active, create shuffled order
+                states.fill(0);
+                for (var i = 0; i < currentEntry.length; i++) {
+                    states[i] = 1;
+                }
+                var indices = [];
+                for (var i = 0; i < currentEntry.length; i++) {
+                    indices.push(i);
+                }
+                shuffleArray(indices);
+                typingPhase.indices = indices;
+            }
+
+            if (step < currentEntry.length) {
+                states[typingPhase.indices[step]] = 2;
+                render();
+                return false;
+            }
+            return true;
+        }
+
+        function corruptingPhase(step) {
+            var currentEntry = entries[currentEntryIndex];
+
+            if (step === 0) {
+                // Create shuffled order for corruption
+                var indices = [];
+                for (var i = 0; i < currentEntry.length; i++) {
+                    indices.push(i);
+                }
+                shuffleArray(indices);
+                corruptingPhase.indices = indices;
+            }
+
+            if (step < currentEntry.length) {
+                states[corruptingPhase.indices[step]] = 1;
+                render();
+                return false;
+            }
+            return true;
+        }
+
+        function adjustingPhase(step) {
+            if (step === 0) {
+                currentEntryIndex = (currentEntryIndex + 1) % entries.length;
+            }
+
+            var nextEntry = entries[currentEntryIndex];
+            var currentActiveCount = states.filter(s => s !== 0).length;
+            var adjustSteps = Math.abs(nextEntry.length - currentActiveCount);
+
+            if (step < adjustSteps) {
+                if (nextEntry.length > currentActiveCount) {
+                    states[currentActiveCount] = 1;
+                } else {
+                    for (var i = states.length - 1; i >= 0; i--) {
+                        if (states[i] !== 0) {
+                            states[i] = 0;
+                            break;
+                        }
+                    }
+                }
+                render();
+                return false;
+            }
+            return true;
+        }
+
+        function render() {
+            var result = '';
+            var currentEntry = entries[currentEntryIndex];
+
+            for (var i = 0; i < states.length; i++) {
+                if (states[i] === 0) {
+                    // Empty - don't add anything
+                    continue;
+                } else if (states[i] === 1) {
+                    // Active - random character
+                    result += generateRandomChar();
+                } else if (states[i] === 2) {
+                    // Static - correct character
+                    result += currentEntry[i] || '';
+                }
+            }
+
+            document.getElementById("typewriter").innerHTML = prefix + result + suffix;
+        }
+
+        function shuffleArray(array) {
+            for (var i = array.length - 1; i > 0; i--) {
+                var j = Math.floor(Math.random() * (i + 1));
+                var temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+            }
+        }
+
+        function generateRandomChar() {
+            var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            return characters.charAt(Math.floor(Math.random() * characters.length));
+        }
+    </script>
 </body>
 </html>
